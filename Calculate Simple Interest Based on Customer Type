@@ -1,0 +1,11 @@
+principal = float(input("Enter the principal amount: "))
+years = int(input("Enter the number of years: "))
+is_senior_citizen = input("Is customer senior citizen (y/n): ")
+
+if is_senior_citizen.lower() == 'y':
+    rate_of_interest = 0.12
+else:
+    rate_of_interest = 0.10
+
+interest = principal * rate_of_interest * years
+print("Interest:", interest)
