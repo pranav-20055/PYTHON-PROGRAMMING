@@ -1,0 +1,16 @@
+decimal_number = int(input("Enter a decimal number: "))
+
+binary_number = ""
+n = decimal_number
+while n > 0:
+    binary_number = str(n % 2) + binary_number
+    n = n // 2
+
+octal_number = ""
+n = decimal_number
+while n > 0:
+    octal_number = str(n % 8) + octal_number
+    n = n // 8
+
+print("Binary Number:", binary_number)
+print("Octal Number:", octal_number)
