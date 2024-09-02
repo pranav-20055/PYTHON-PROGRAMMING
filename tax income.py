@@ -1,7 +1,5 @@
-# Input: Taxable income
 taxable_income = float(input("Enter your taxable income: "))
 
-# Calculate tax based on income brackets
 if taxable_income <= 150000:
     tax = 0
     print("No tax.")
