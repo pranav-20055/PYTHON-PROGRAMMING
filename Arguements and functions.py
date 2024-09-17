@@ -1,20 +1,25 @@
-def is_leap_year(year):
-    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        return True
-    return False
+# Function to demonstrate all argument types
+def student_info(name, age, grade='A', *subjects, **extra_info):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Grade: {grade}")
+    
+    print("Subjects:", ', '.join(subjects))
+    
+    for key, value in extra_info.items():
+        print(f"{key}: {value}")
 
-def next_leap_year(current_year):
-    next_year = current_year + 1
-    while not is_leap_year(next_year):
-        next_year += 1
-    return next_year
+# Positional Arguments
+student_info('John', 15)
 
-year = int(input("Enter a year: "))
+# Keyword Arguments
+student_info(name='Alice', age=14, grade='B')
 
-if is_leap_year(year):
-    print(f"{year} is a leap year.")
-else:
-    print(f"{year} is not a leap year.")
+# Default Arguments (Grade defaults to 'A')
+student_info('Bob', 13)
 
-next_leap = next_leap_year(year)
-print(f"The next leap year after {year} is {next_leap}.")
+# Variable-length Arguments (Using *args)
+student_info('Emily', 16, 'A', 'Math', 'Science', 'History')
+
+# Variable-length Keyword Arguments (Using **kwargs)
+student_info('Mark', 17, 'A', 'Math', 'Science', address='123 Main St', phone='555-1234')
